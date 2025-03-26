@@ -23,6 +23,10 @@ app.use(cors()); // Enable CORS for the specified origin
 app.use(express.json());
 app.use(express.urlencoded())
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
